@@ -1,0 +1,6 @@
+*.css
+*.swp
+*.swo
+*.swn
+*.log
+src/public/vendor/
