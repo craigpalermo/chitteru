@@ -37,10 +37,15 @@ teamMembers = (JSON.parse(fs.readFileSync("src/team.json", "utf8")))
 team = (req, res) ->
     res.render('team', { title : 'Team', teamMembers: teamMembers })
 
+# rankings page
+rankings = (req, res) ->
+    res.render('rankings', { title : 'Rankings' })
+
 # Routes
 app.get('/', home)
 app.get('/about', about)
 app.get('/team', team)
+app.get('/rankings', rankings)
 
 # listen server on port 3000
 app.listen(3000)

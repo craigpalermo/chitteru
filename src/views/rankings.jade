@@ -1,0 +1,49 @@
+extends layout
+
+block extrahead
+  link(rel="stylesheet", href="/css/content.css")
+
+block content
+  div.content-wrapper.flex(ng-controller="RankCtrl")
+    div.content
+      div.title.flex.flex-center
+        h1 University Rankings
+
+      div.flex.flex-center
+        div.container-orgs
+          div.school(ng-repeat="school in data | orderBy:'name'")
+            h3 {{ school.name }}
+            table
+              thead
+                tr
+                  th Rank
+                  th Organization
+              tbody
+                tr(ng-repeat="org in school.orgs | orderBy:'-points'")
+                  td {{ $index+1 }}
+                  td {{ org.name }}
+
+      h2 University Leaderboard
+      div.flex.flex-center
+        table
+          thead
+            tr
+              th Rank
+              th University
+          tbody
+            tr(ng-repeat="school in schools | orderBy:'-score'")
+              td {{ $index+1 }}
+              td {{ school.name }}
+
+      h2 Chitter on Twitter
+      a.twitter-timeline(href="https://twitter.com/getchitter", data-widget-id="508302796764876801") Tweets by @getchitter
+      script.
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+      h2 Bring Chitter U to Your Campus
+      p
+        | Want to bring Chitter U to your campus? We will be hand selecting 
+        | another 5 schools for a rolling launch throughout the fall and into 
+        | the winter. Simply download the app and select your university in 
+        | the "Chitter U" tab.
+      include widgets
