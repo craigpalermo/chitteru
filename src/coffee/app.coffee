@@ -28,9 +28,18 @@ home = (req, res) ->
 about = (req, res) ->
     res.render('about', { title : 'About' })
 
+# team page
+
+# load team members json file
+teamMembers = require('./team.json')
+
+team = (req, res) ->
+    res.render('team', { title : 'Team', team: teamMembers })
+
 # Routes
 app.get('/', home)
 app.get('/about', about)
+app.get('/team', team)
 
 # listen server on port 3000
 app.listen(3000)
