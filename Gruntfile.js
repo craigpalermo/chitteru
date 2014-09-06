@@ -38,7 +38,8 @@ module.exports = function(grunt) {
                 cwd: "src/coffee/",
                 files: [
                     {src: 'src/coffee/app.coffee', dest: 'src/app.js'},
-                    {src: 'src/coffee/index.coffee', dest: 'src/public/js/index.js'}
+                    {src: 'src/coffee/index.coffee', dest: 'src/public/js/index.js'},
+                    {src: 'src/coffee/controller.coffee', dest: 'src/public/js/controller.js'}
                 ],
                 ext: '.js'
             }

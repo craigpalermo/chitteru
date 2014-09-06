@@ -1,8 +1,14 @@
 [
     {
-        "imageUrl": "...",
+        "imageUrl": "/img/team/260x160.gif",
         "name": "Member 1",
         "school": "UMD",
         "bio": "He's cool."
+    },
+    {
+        "imageUrl": "/img/team/260x160.gif",
+        "name": "Bob",
+        "school": "Towson",
+        "bio": "He's not very cool."
     }
 ]

@@ -1,41 +1,44 @@
 doctype html
-head
-  meta(charset="utf-8")
-  meta(http-equiv="X-UA-Compatible" content="IE=edge")
-  meta(name="viewport" content="width=device-width, initial-scale=1")
+html(ng-app="myApp")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
 
-  //- Stylesheets
-  link(rel='stylesheet', href='/vendor/normalize.css/normalize.css')
-  link(rel='stylesheet', href='/vendor/foundation/foundation.css')
-  link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
-  link(rel='stylesheet', href='/vendor/Hover/hover.css')
-  link(rel='stylesheet', href='/css/style.css')
+    //- Stylesheets
+    link(rel='stylesheet', href='/vendor/normalize.css/normalize.css')
+    link(rel='stylesheet', href='/vendor/foundation/foundation.css')
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/vendor/Hover/hover.css')
+    link(rel='stylesheet', href='/css/style.css')
 
-  //- Scripts
-  script(src='/js/analytics.js')
-  script(src='/vendor/jquery/jquery.js')
-  script(src='/vendor/foundation/foundation.js')
-  script(src='/vendor/jquery.scrollTo/jquery.scrollTo.js')
-  script(src='/vendor/jquery.localScroll/jquery.localScroll.js')
-  script(src='/js/index.js')
+    //- Scripts
+    script(src='/js/analytics.js')
+    script(src='/vendor/jquery/jquery.js')
+    script(src='/vendor/foundation/foundation.js')
+    script(src='/vendor/jquery.scrollTo/jquery.scrollTo.js')
+    script(src='/vendor/jquery.localScroll/jquery.localScroll.js')
+    script(src='/vendor/angularjs/angular.js')
+    script(src='/js/controller.js')
+    script(src='/js/index.js')
 
-  title Welcome to Chitter U
+    title Welcome to Chitter U
 
-  block extrahead
+    block extrahead
 
-body
-  div.flex.nav-bar.nav-bottom
-    a.logo.flex.flex-center(href="/")
-      img(src="/img/logo.png")
-    a.nav-button.flex.flex-center.trim(href="/about")
-      div.nav-item Chitter U in a Nutshell
-    a.nav-button.flex.flex-center.trim(href="/team")
-      div.nav-item Our Brand Experience Team
-    a.nav-button.flex.flex-center.trim(href="#")
-      div.nav-item University Rankings
+  body
+    div.flex.nav-bar.nav-bottom
+      a.logo.flex.flex-center(href="/")
+        img(src="/img/logo.png")
+      a.nav-button.flex.flex-center.trim(href="/about")
+        div.nav-item Chitter U in a Nutshell
+      a.nav-button.flex.flex-center.trim(href="/team")
+        div.nav-item Our Brand Experience Team
+      a.nav-button.flex.flex-center.trim(href="#")
+        div.nav-item University Rankings
 
-  block content
+    block content
 
-scripts
-  block extrascripts
+  scripts
+    block extrascripts
 

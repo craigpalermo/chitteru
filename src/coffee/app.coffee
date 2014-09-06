@@ -31,10 +31,11 @@ about = (req, res) ->
 # team page
 
 # load team members json file
-teamMembers = require('./team.json')
+fs = require("fs")
+teamMembers = (JSON.parse(fs.readFileSync("src/team.json", "utf8")))
 
 team = (req, res) ->
-    res.render('team', { title : 'Team', team: teamMembers })
+    res.render('team', { title : 'Team', teamMembers: teamMembers })
 
 # Routes
 app.get('/', home)
