@@ -24,6 +24,16 @@ head
   block extrahead
 
 body
+  div.flex.nav-bar.nav-bottom
+    a.logo.flex.flex-center(href="/")
+      img(src="/img/logo.png")
+    a.nav-button.flex.flex-center.trim(href="/about")
+      div.nav-item Chitter U in a Nutshell
+    div.nav-button.flex.flex-center.trim(href="#")
+      div.nav-item Our Brand Experience Team
+    div.nav-button.flex.flex-center.trim(href="#")
+      div.nav-item University Rankings
+
   block content
 
 scripts

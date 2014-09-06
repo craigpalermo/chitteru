@@ -24,8 +24,13 @@ app.use(express.json())
 home = (req, res) ->
     res.render('main', { title : 'Home' })
 
+# about page
+about = (req, res) ->
+    res.render('about', { title : 'About' })
+
 # Routes
 app.get('/', home)
+app.get('/about', about)
 
 # listen server on port 3000
 app.listen(3000)

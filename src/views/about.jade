@@ -1,0 +1,45 @@
+extends layout
+
+block extrahead
+  link(rel="stylesheet", href="/css/content.css")
+
+block content
+  div.content-wrapper.flex
+    div.content
+      div.title.flex.flex-center
+        h1 Chitter U in a Nutshell
+
+      h2 About the Program
+      img.video(src="http://placehold.it/640x390")
+      p
+        | Chitter U is a collaborative initiative for invited universities that
+        | is being launched in the Fall of 2014. Our goal is to bring the
+        | Chitter brand experience to the university setting for the benefit of
+        | those at-large communities. In line with that vision, we have
+        | initiated a Share It Forward Campaign where the university
+        | organization at each Chitter U campus that garners the most downloads
+        | will have a $500 charitable donation made on their behalf to the cause
+        | of their choice.
+
+      h2 Our Brand
+      img.video(src="http://placehold.it/640x390")
+      p
+        | Chitter is a mobile app that compensates users for sharing content on
+        | their social networks. For small businesses and national brands, Chitter
+        | is the future of location-based, hyper-localized marketing; the
+        | realization of the new customer experience, if you may. For us consumers,
+        | Chitter is simply the portal to get the best deals, rewards, and perks
+        | for doing what we already do.
+
+      p
+        | Check out what has the start-up community going nuts since our
+        | launch at 2014 SXSW and win at Tech Cocktail Chicago this May:
+        a(href="//getchitter.com", target="_blanl")  GetChitter.com
+
+      div.container-icons.flex.flex-row-center
+        a.icon-app(href="http://t.co/2OJA0p6yBD", target="_blank")
+          i.fa.fa-apple
+          h3 iOS
+        a.icon-app(href="http://t.co/WSO3MVmhf6", target="_blank")
+          i.fa.fa-android
+          h3 Android
