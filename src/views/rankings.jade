@@ -23,18 +23,17 @@ block content
         div.container-orgs
           div.school(ng-repeat="school in data | orderBy:'name'")
             h3 {{ school.name }}
-            div.container-table.flex.flex-center
-              table
-                thead
-                  tr
-                    th Rank
-                    th Organization
-                    th Points
-                tbody
-                  tr(ng-repeat="org in school.orgs | orderBy:'-points' | limitTo: 10")
-                    td {{ $index+1 }}
-                    td {{ org.name }}
-                    td {{ org.points }}
+            table
+              thead
+                tr
+                  th Rank
+                  th Organization
+                  th Points
+              tbody
+                tr(ng-repeat="org in school.orgs | orderBy:'-points' | limitTo: 8")
+                  td {{ $index+1 }}
+                  td {{ org.name }}
+                  td {{ org.points }}
 
       h2 Chitter on Twitter
       a.twitter-timeline(href="https://twitter.com/getchitter", data-widget-id="508302796764876801") Tweets by @getchitter
