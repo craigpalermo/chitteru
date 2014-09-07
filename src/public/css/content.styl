@@ -40,7 +40,9 @@ body
         font-size 1.6em
         height 140px
     .title h1
+        font-family "Roboto Slab", serif
         font-weight bold
+        font-family 
 
 // App icons ---------------------------------------------------------------
 .container-icons
@@ -82,5 +84,28 @@ body
     display flex
     flex-flow row wrap
     justify-content space-between
-.school table
+
+.container-table
     width 200px
+
+.leaderboard-school
+    margin-left 50px
+    margin-right 50px
+.leaderboard-school img
+    width 200px
+@media only screen
+    .leaderboard-school
+        height 100px
+    .container-logo
+        display none
+@media only screen and (min-width: 40.063em)
+    .leaderboard-school
+        height 280px
+    .container-logo
+        display flex
+    
+.container-logo
+    height 200px
+
+.container-leaderboard
+    flex-wrap wrap

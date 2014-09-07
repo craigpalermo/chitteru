@@ -7,33 +7,34 @@ block content
   div.content-wrapper.flex(ng-controller="RankCtrl")
     div.content
       div.title.flex.flex-center
-        h1 University Rankings
+        h1 Chitter U Scoreboard
 
+      h2 University Leaderboard
+      div.container-leaderboard.flex.flex-center
+        div.leaderboard-school(ng-repeat="school in data | orderBy:'-score'")
+          div.container-logo.flex.flex-center
+            img.show-for-medium-up(src="{{school.image}}")
+          strong {{ school.name }}
+          div Rank: {{ $index + 1 }}
+          div Points: {{ school.score }}
+
+      h2 University Rankings
       div.flex.flex-center
         div.container-orgs
           div.school(ng-repeat="school in data | orderBy:'name'")
             h3 {{ school.name }}
-            table
-              thead
-                tr
-                  th Rank
-                  th Organization
-              tbody
-                tr(ng-repeat="org in school.orgs | orderBy:'-points'")
-                  td {{ $index+1 }}
-                  td {{ org.name }}
-
-      h2 University Leaderboard
-      div.flex.flex-center
-        table
-          thead
-            tr
-              th Rank
-              th University
-          tbody
-            tr(ng-repeat="school in schools | orderBy:'-score'")
-              td {{ $index+1 }}
-              td {{ school.name }}
+            div.container-table.flex.flex-center
+              table
+                thead
+                  tr
+                    th Rank
+                    th Organization
+                    th Points
+                tbody
+                  tr(ng-repeat="org in school.orgs | orderBy:'-points' | limitTo: 10")
+                    td {{ $index+1 }}
+                    td {{ org.name }}
+                    td {{ org.points }}
 
       h2 Chitter on Twitter
       a.twitter-timeline(href="https://twitter.com/getchitter", data-widget-id="508302796764876801") Tweets by @getchitter
