@@ -4,12 +4,15 @@ body
 
 .content-wrapper
     text-align center
-    width 100%
     justify-content center
 .content
     max-width 900px
-.content p
-    font-size 1.1em
+@media only screen
+    .content p
+        font-size 1em
+@media only screen and (min-width: 40.063em)
+    .content p
+        font-size 1.1em
 
 .video
     margin-top 10px
@@ -28,19 +31,32 @@ body
     border black solid 4px
 
 // Large title -------------------------------------------------------------
-.title
-    height 180px
-    font-size 1.6em
+@media only screen
+    .title
+        font-size 1em
+        height 100px
+@media only screen and (min-width: 40.063em)
+    .title
+        font-size 1.6em
+        height 140px
+    .title h1
+        font-weight bold
 
 // App icons ---------------------------------------------------------------
 .container-icons
     text-align center
     height 180px
 .icon-app
-    margin-left 100px
-    margin-right 100px
-.icon-app i
-    font-size 70px
+    margin-left 40px
+    margin-right 40px
+.icon-app img
+    height 60px
+@media only screen
+    .icon-app
+        width 100%
+@media only screen and (min-width: 40.063em)
+    .icon-app
+        width auto
 
 // Team members --------------------------------------------------------------
 .container-team

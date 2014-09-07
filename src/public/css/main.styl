@@ -10,14 +10,23 @@ body
 
 // Large title -------------------------------------------------------------
 .title
-    padding-top 80px
     text-align center
     font-size 2em
 .title h1
     font-family "Roboto Slab", serif
     margin 0
-    font-size 2.5em
     font-weight 700
+    margin-bottom 10px
+@media only screen
+    .title
+        padding-top 10px
+    .title h1
+        font-size 1.5em
+@media only screen and (min-width: 40.063em)
+    .title
+        padding-top 40px
+    .title h1
+        font-size 2.5em
 
 // Bottom nav bar -------------------------------------------------------------
 .nav-bar
@@ -27,3 +36,9 @@ body
 .nav-bar a
 .nav-bar a:visited
     color white !important
+@media only screen
+    .nav-bar
+        background rgba(0,0,0,.3)
+@media only screen and (min-width: 40.063em)
+    .nav-bar
+        background rgba(0,0,0,.7)

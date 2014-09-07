@@ -4,12 +4,12 @@ block extrahead
   link(rel="stylesheet", href="/css/content.css")
 
 block content
-  div.content-wrapper.flex
+  div.content-wrapper.flex.flex-center
     div.content
       div.title.flex.flex-center
         h1 Our Brand Experience Team
 
-      div.container-team(ng-controller="MemberCtrl")
+      div.container-team.flex.flex-center(ng-controller="MemberCtrl")
         div.member(ng-repeat="member in teamMembers")
           img(src="{{ member.imageUrl }}")
           h3 {{ member.name }}
