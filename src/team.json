@@ -1,14 +1,14 @@
 [
     {
-        "imageUrl": "/img/team/260x160.gif",
-        "name": "Member 1",
-        "school": "UMD",
-        "bio": "He's cool."
+        "imageUrl": "/img/team/abel.jpg",
+        "name": "Sarah Abel",
+        "school": "University of Michigan",
+        "bio": "My name is Sarah Abel and I am a senior at the University of Michigan. I am currently pursuing a degree in Communication Studies, but my interests extend far beyond this field. I am an avid traveller, and spent my last semester traveling throughout Europe. I am a San Francisco Bay Area native, and have spent my last two summers with amazing internships there, but a piece of my heart will always lie in Ann Arbor...too much love for the Maize and Blue!"
     },
     {
-        "imageUrl": "/img/team/260x160.gif",
-        "name": "Bob",
-        "school": "Towson",
-        "bio": "He's not very cool."
+        "imageUrl": "/img/team/rebhun.jpg",
+        "name": "Scott Rebhun",
+        "school": "Syracuse University",
+        "bio": "I asenior year at Syracuse University where I am studying Finance and Accounting with a minor in Global Enterprise Technology. The combination of my passion to leverage new technology and contagious entrepreneurial spirit provides me with the energy and enthusiasm to tackle great challenges. My drive and ambition is what will propel ideas to fruition in order to solve complex problems for an ever-changing world."
     }
 ]
