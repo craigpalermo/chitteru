@@ -10,5 +10,11 @@
         "name": "Scott Rebhun",
         "school": "Syracuse University",
         "bio": "Scott Rebhun is beginning his senior year at Syracuse University, where he is studying Finance and Accounting with a minor in Global Enterprise Technology. The combination of his passion to leverage new technology and contagious entrepreneurial spirit provides Scott with the energy and enthusiasm to tackle great challenges. SR's drive and ambition is what will propel ideas to fruition in order to solve complex problems for an ever-changing world."
+    },
+    {
+        "imageUrl": "/img/team/meredith.jpg",
+        "name": "Meredith Wadsworth",
+        "school": "University of Virginia",
+        "bio": "Meredith is a junior at the University of Virginia, majoring in Media Studies with a minor in Economics. Originally from a suburb of Boston, Ma, Meredith has spent her recent summers in New York City interning with fashion and tech companies. She hopes to pursue a career in the fashion-tech industry, specifically in areas of PR, marketing, and merchandising."
     }
 ]

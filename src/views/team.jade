@@ -10,7 +10,7 @@ block content
         h1 Our Brand Experience Team
 
       div.container-team.flex.flex-center(ng-controller="MemberCtrl")
-        div.member(ng-repeat="member in teamMembers")
+        div.member(ng-repeat="member in teamMembers | orderBy: 'name'")
           img(src="{{ member.imageUrl }}")
           h3 {{ member.name }}
           h4
