@@ -6,7 +6,7 @@ which replace HTML, CSS, and CoffeeScript (respectively).
 Changes to Jade and Stylus files do not require anything
 to be recompiled, as this is handle for you by the Node server.
 CoffeeScript files MUST be recompiled before changes will
-take effect (see [here](#Modifying-app.coffee)).
+take effect (see below).
 
 ## Setup
 
