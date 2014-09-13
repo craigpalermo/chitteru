@@ -59,6 +59,9 @@ team.js is loaded once every time the server is started, so
 changes made to this file will not come into effect until
 the server is restarted.
 
+Note: Team member photos should be 260x260 pixels to keep 
+the design consistent.
+
 ### Adding promo codes
 TBD
 
