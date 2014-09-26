@@ -6,7 +6,7 @@ which replace HTML, CSS, and CoffeeScript (respectively).
 Changes to Jade and Stylus files do not require anything
 to be recompiled, as this is handle for you by the Node server.
 CoffeeScript files MUST be recompiled before changes will
-take effect (see [here](#Modifying-app.coffee)).
+take effect (see below).
 
 ## Setup
 
@@ -58,6 +58,9 @@ is stored in the following format:
 team.js is loaded once every time the server is started, so
 changes made to this file will not come into effect until
 the server is restarted.
+
+Note: Team member photos should be 260x260 pixels to keep 
+the design consistent.
 
 ### Adding promo codes
 TBD
