@@ -22,5 +22,29 @@
         "name": "Brandon Sticca",
         "school": "University of Maryland",
         "bio": "Brandon Sticca is a junior at the University of Maryland pursuing a degree in Communication Studies and Marketing. One of UMD’s most socially connected students, Brandon never shies from an opportunity to broaden his personal network. His outgoing personality, ambitious drive, and work ethic make Brandon a great addition to the Chitter U team."
+    },
+    {
+        "imageUrl": "/img/team/mollie.jpg",
+        "name": "Mollie Masucci",
+        "school": "Penn State University",
+        "bio": "Mollie Masucci is a 19 year old marketing major at Penn State University. She is a member of the professional fraternity, Phi Chi Theta, and aspires to be a social/philanthropy char in the semesters to come. In the future, Mollie desires to work in the marketing field with a more hands-on and creative approach."
+    },
+    {
+        "imageUrl": "/img/team/feldman.jpg",
+        "name": "Eric Feldman",
+        "school": "Penn State University",
+        "bio": "Eric Feldman is an Integrated Undergraduate-Graduate student at Penn State University graduating in May 2015 with a B.S. in Labor Employment Relations and a M.S. in Human Resources and Employment Relations. Eric is a driven individual with a passion for people. Eric is a brother of the Penn State chapter of the Alpha Epsilon Pi Fraternity and has held executive board positions for multiple semesters while at Penn State. He has a deep passion for sports and is a strong supporter of all Boston sports teams and of course Penn State Football."
+    },
+    {
+        "imageUrl": "/img/team/zwerin.jpg",
+        "name": "Amanda Zwerin",
+        "school": "James Madison University",
+        "bio": "My name is Amanda Zwerin and I live in Long Island, NY. I'm a sophomore Marketing Major at James Madison University. I am a member of Sigma Kappa Sorority and Madison Marketing Association. I enjoy dancing, traveling and taking pictures. I look forward to a career in Marketing and to one day living in New York City."
+    },
+    {
+        "imageUrl": "/img/team/cunningham.jpg",
+        "name": "Nolan Cunningham",
+        "school": "Wisconsin School of Business",
+        "bio": "My name is Nolan Cunningham and I am a Sophomore Marketing and MHR Major here as a part of the Wisconsin School of Business. I'm extremely involved here on campus in student organizations, including Alpha Kappa Psi Professional Business Fraternity and Undergraduate Outreach Committee. If you ever see me out and about on a Badger Gameday or any other time feel free to reach out and say hello!"
     }
 ]
