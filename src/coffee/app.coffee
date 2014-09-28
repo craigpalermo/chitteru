@@ -39,7 +39,7 @@ team = (req, res) ->
 
 # rankings page
 rankings = (req, res) ->
-    res.render('rankings', { title : 'Rankings' })
+    res.render('temp_rankings', { title : 'Rankings' })
 
 # Routes
 app.get('/', home)
