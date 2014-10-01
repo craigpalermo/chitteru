@@ -9,7 +9,8 @@
     "nib": "*",
     "bower": "~1.2.8",
     "bower-installer": "~0.6.0",
-    "mongoose": "~3.8.8"
+    "mongoose": "~3.8.8",
+    "xml2js": "~0.4.4"
   },
   "devDependencies": {
     "grunt": "latest",

@@ -11,7 +11,12 @@ block content
 
       h2 University Leaderboard
       div.container-leaderboard.flex.flex-center
-        div.leaderboard-school(ng-repeat="school in data | orderBy:'-score'")
+        //- loading spinner
+        div.loading-spinner(ng-hide="schools")
+          i.fa.fa-spin.fa-spinner
+
+        //- schools and logos, sorted by rank
+        div.leaderboard-school(ng-repeat="school in schools | orderBy:'-score'")
           div.container-logo.flex.flex-center
             img.show-for-medium-up(src="{{school.image}}")
           strong {{ school.name }}
@@ -21,8 +26,13 @@ block content
       h2 University Rankings
       div.flex.flex-center
         div.container-orgs
-          div.school(ng-repeat="school in data | orderBy:'name'")
-            h3 {{ school.name }}
+          //- loading spinner
+          div.loading-spinner(ng-hide="schools")
+            i.fa.fa-spin.fa-spinner
+
+          //- orgs separated by school, sorted by rank
+          div.school(ng-repeat="(key,val) in data | orderBy:key")
+            h3 {{ key }}
             table
               thead
                 tr
@@ -30,10 +40,10 @@ block content
                   th Organization
                   th Points
               tbody
-                tr(ng-repeat="org in school.orgs | orderBy:'-points' | limitTo: 8")
+                tr(ng-repeat="org in val | orderBy:'-promoNum' | limitTo: 8")
                   td {{ $index+1 }}
-                  td {{ org.name }}
-                  td {{ org.points }}
+                  td {{ org.personName }}
+                  td {{ org.promoNum }}
 
       h2 Chitter on Twitter
       a.twitter-timeline(href="https://twitter.com/getchitter", data-widget-id="508302796764876801") Tweets by @getchitter

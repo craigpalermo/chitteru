@@ -3,125 +3,38 @@ app = angular.module('myApp', [])
 app.controller 'MemberCtrl', ($scope) ->
   $scope.teamMembers = teamMembers
 
-# get data
-data =  [
-          {
-            name: "University of Maryland",
-            image: "/img/logos/umd.png",
-            score: 15,
-            orgs: [
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 2", points: 10},
-            ]
-          },
-          {
-            name: "University of Virginia",
-            image: "/img/logos/uva.png",
-            score: 25,
-            orgs: [
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 2", points: 10},
-            ]
-          },
-          {
-            name: "Rutgers University",
-            image: "/img/logos/rutgers.png",
-            score: 3,
-            orgs: [
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 2", points: 10},
-            ]
-          },
-          {
-            name: "University of Michigan",
-            image: "/img/logos/michigan.png",
-            score: 63,
-            orgs: [
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 2", points: 10},
-            ]
-          },
-          {
-            name: "Syracuse University",
-            image: "/img/logos/syracuse.png",
-            score: 12,
-            orgs: [
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 1", points: 15},
-              {name: "org 1", points: 15},
-              {name: "org 2", points: 10},
-              {name: "org 2", points: 10},
-            ]
-          },
-        ]
+# define location of logo for each school
+logoPrefix = "/img/logos/"
+logos = {
+          "University of Michigan":   "#{logoPrefix}michigan.png"
+          "University of Maryland":   "#{logoPrefix}umd.png"
+          "Rutgers University":       "#{logoPrefix}rutgers.png"
+          "James Madison University": "#{logoPrefix}jmu.png"
+          "Syracuse University":      "#{logoPrefix}syracuse.png"
+          "Penn State University":    "#{logoPrefix}psu.png"
+          "University of Virginia":   "#{logoPrefix}uva.png"
+        }
 
-app.controller 'RankCtrl', ($scope) ->
-  # calculate rankings
-  schools = []
-  score = 0
-
-  for school in data
-    for org in school.orgs
-      score += org.points
-   
-    schools.push {"name": school.name, "score": score}
+app.controller 'RankCtrl', ($scope, $http) ->
+  # get promo code data from api
+  resp = $http(
+    method: 'GET'
+    url: "/get_promo_codes/"
+  )
+  resp.success (data) ->
+    schools = []
     score = 0
 
-  console.log schools
-  $scope.data = data
-  $scope.schools = schools
+    # compute score for each school
+    for key, val of data
+      for org in val
+        score += parseInt org.promoNum
+      newSchool = {"name": key, "score": score, "image": logos[key]}
+      schools.push newSchool
+      score = 0
+
+    # add data to scope
+    $scope.data = data
+    $scope.schools = schools
+  resp.error (data) ->
+    console.log "Error occurred loading promo code data"
