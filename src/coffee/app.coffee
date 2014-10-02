@@ -40,7 +40,7 @@ team = (req, res) ->
 
 # rankings page
 rankings = (req, res) ->
-  res.render('temp_rankings', { title : 'Rankings' })
+  res.render('rankings', { title : 'Rankings' })
 
 {parseString} = require 'xml2js'
 
