@@ -40,7 +40,7 @@ team = (req, res) ->
 
 # rankings page
 rankings = (req, res) ->
-  res.render('rankings', { title : 'Rankings' })
+  res.render('temp_rankings', { title : 'Rankings' })
 
 {parseString} = require 'xml2js'
 
@@ -57,7 +57,7 @@ codes = (req, resp) ->
 
     res.on('end', ->
       xml = body
-      
+
       # parse xml response to json
       parseString xml, (err, result) ->
         result = result.top.PromoCode
